@@ -7,17 +7,20 @@
   
   <title>vue模板语法 | A Programmer&#39;s life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本使用123456789101112131415&lt;body&gt;	&lt;div id&#x3D;&quot;app&quot;&gt;		&lt;div&gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&lt;&#x2F;div&gt;	&lt;&#x2F;div&gt;	&lt;script src&#x3D;&quot;.&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;	&lt;script&gt;		const vue &#x3D; new">
+  <meta name="description" content="基本使用123456789101112131415&lt;body&gt;    &lt;div id&#x3D;&quot;app&quot;&gt;        &lt;div&gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&lt;&#x2F;div&gt;    &lt;&#x2F;div&gt;    &lt;script src&#x3D;&quot;.&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;    &lt;script&amp;gt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue模板语法">
 <meta property="og:url" content="http://yoursite.com/2020/05/04/vue%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="A Programmer&#39;s life">
-<meta property="og:description" content="基本使用123456789101112131415&lt;body&gt;	&lt;div id&#x3D;&quot;app&quot;&gt;		&lt;div&gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&lt;&#x2F;div&gt;	&lt;&#x2F;div&gt;	&lt;script src&#x3D;&quot;.&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;	&lt;script&gt;		const vue &#x3D; new">
+<meta property="og:description" content="基本使用123456789101112131415&lt;body&gt;    &lt;div id&#x3D;&quot;app&quot;&gt;        &lt;div&gt;&amp;#123;&amp;#123;msg&amp;#125;&amp;#125;&lt;&#x2F;div&gt;    &lt;&#x2F;div&gt;    &lt;script src&#x3D;&quot;.&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;    &lt;script&amp;gt">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/images/%E7%90%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F.gif">
+<meta property="og:image" content="http://yoursite.com/images/v-once.gif">
 <meta property="article:published_time" content="2020-05-04T15:28:28.000Z">
-<meta property="article:modified_time" content="2020-05-04T15:37:12.501Z">
+<meta property="article:modified_time" content="2020-05-04T17:45:31.661Z">
 <meta property="article:author" content="Uncle Kay">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/%E7%90%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F.gif">
   
     <link rel="alternate" href="/atom.xml" title="A Programmer&#39;s life" type="application/atom+xml">
   
@@ -88,13 +91,142 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">		<span class="keyword">const</span> vue = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">			el: <span class="string">'#app'</span>,</span></span><br><span class="line">			data: &#123;</span><br><span class="line"><span class="actionscript">				msg: <span class="string">'Hello, vue!'</span></span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;);</span><br><span class="line">	<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">		<span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">			el: <span class="string">'#app'</span>,</span></span><br><span class="line">            data: &#123;</span><br><span class="line"><span class="actionscript">				msg: <span class="string">'Hello, vue!'</span></span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><code>el</code>。元素的挂载位置（值可以是CSS选择器或者是DOM元素）</p>
 </blockquote>
 <blockquote>
-<p><code>data</code>。模型数据（值是一个对象）</p>
+<p><code>data</code>。模型数据（值是一个对象）。</p>
 </blockquote>
+<h3 id="Vue代码运行原理分析"><a href="#Vue代码运行原理分析" class="headerlink" title="Vue代码运行原理分析"></a>Vue代码运行原理分析</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>疑问：这个语法结构浏览器认识吗？</p>
+<p>答：其实浏览器本身不认识，之所以它能够显示最终的结果，那是因为Vue这个库文件它进行了解析操作，它把这种语法结构解析成最终的结果然后显示到了这个浏览器当中，才能够呈现出来，那么这个过程呢有一个特定的称谓叫：编译过程（Vue语法==》原生语法）。</p>
+<h2 id="vue模板语法"><a href="#vue模板语法" class="headerlink" title="vue模板语法"></a>vue模板语法</h2><h3 id="模板语法概述"><a href="#模板语法概述" class="headerlink" title="模板语法概述"></a>模板语法概述</h3><p>疑问：如何理解前端渲染？</p>
+<p>答：就是把数据填充到HTML标签中。我们在学AJAX的时候呢要从后台获取数据，拿到数据过后呢我们肯定要把它填充到HTML标签里面之后呢才能够呈现到浏览器的页面中，所以说呢这个过程就叫前端渲染。</p>
+<blockquote>
+<p>前端的产物就是静态HTML内容。</p>
+</blockquote>
+<p>前端渲染方式：</p>
+<ul>
+<li>原生js拼接字符串</li>
+<li>使用前端模板引擎（例如：art-template）</li>
+<li>使用Vue特有的模板语法</li>
+</ul>
+<p>Vue模板语法：</p>
+<ul>
+<li>插值表达式</li>
+<li>指令</li>
+<li>事件绑定</li>
+<li>属性绑定</li>
+<li>样式绑定</li>
+<li>分支循环结构</li>
+</ul>
+<h3 id="指令v-cloak"><a href="#指令v-cloak" class="headerlink" title="指令v-cloak"></a>指令v-cloak</h3><p>疑问：什么是指令<br>答：指令的本质就是自定义属性，指令的格式：以v-开头（比如：v-cloak）</p>
+<p>疑问：什么是自定义属性<br>答：比如给div标签加<code>setAttribute(&#39;abc&#39;, &#39;123&#39;)</code>这个就是自定义属性</p>
+<p>疑问：那对比的标准属性是什么呢<br>答：比如像a标签的href属性，form标签的action属性这都属于标准。</p>
+<p>疑问：v-cloak的作用是什么<br>答：因为插值表达式存在闪动问题，v-cloak可以解决这个问题。</p>
+<p>疑问：为什么会有闪动的问题呢？<br>答：这取决于Vue是如何解析那个插值表达式的，它其实呢一开始是先把插值表达式显示在这个页面中然后迅速的把它替换成对应的内容，所以说呢有这么一个迅速的闪动过程，但是呢这种用户体验其实并不好，我们要解决这个问题。</p>
+<p>v-cloak指令用法：分两步</p>
+<p>(1)提供样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[v-cloak] &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(2)在插值表达式所在的标签中添加v-cloak指令</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-cloak</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>疑问：背后的原理是什么？<br>答：先通过样式隐藏内容，然后在内存中进行值得替换，替换好之后再显示最终的结果。</p>
+<h3 id="数据绑定指令"><a href="#数据绑定指令" class="headerlink" title="数据绑定指令"></a>数据绑定指令</h3><p>以下这三个指令都是用于把数据填充到页面中，从这个角度来说呢与插值表达式的作用是类似的，但是这三个指令各自有不同的地方</p>
+<h4 id="1-v-text"><a href="#1-v-text" class="headerlink" title="(1) v-text"></a>(1) v-text</h4><p>填充文本 ，相比插值表达式更加简洁，与插值表达式不同的是它没有闪动问题</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-text</span>=<span class="string">"msg"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-v-html"><a href="#2-v-html" class="headerlink" title="(2) v-html"></a>(2) v-html</h4><p>填充HTML片段，存在安全问题，使用原则：本网站内部数据可以使用，来自第三方的数据不推荐使用。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-html</span>=<span class="string">"msg"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">data: &#123;</span><br><span class="line">  msg: <span class="string">'&lt;h1&gt;Hello,Vue&lt;/h1&gt;'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-v-pre"><a href="#3-v-pre" class="headerlink" title="(3) v-pre"></a>(3) v-pre</h4><p>显示原始信息，跳过编译过程（分析编译过程）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-pre</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数据响应式"><a href="#数据响应式" class="headerlink" title="数据响应式"></a>数据响应式</h2><p>如何理解响应式</p>
+<p>疑问：如何解释html5中的响应式<br>答：因为屏幕尺寸的变化导致了样式的变化，所以就需要做屏幕的适配。</p>
+<p>疑问：什么是数据的响应式<br>答：数据的变化会导致内容的变化，就如以下<br><img src="/images/%E7%90%86%E8%A7%A3%E6%95%B0%E6%8D%AE%E5%93%8D%E5%BA%94%E5%BC%8F.gif" alt=""></p>
+<p>什么是数据绑定？</p>
+<p>就是将数据填充到标签中，说白了我们之前学的插值表达式和那三个指令（v-text，v-html，v-pre）它们所做的工作就是把数据填充到页面的标签里面，其实这个过程呢就叫数据绑定。</p>
+<p>v-once 只编译一次，显示内容之后不再具有响应功能</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-text</span>=<span class="string">"msg"</span> <span class="attr">v-once</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">    data: &#123;</span><br><span class="line">        msg: <span class="string">'Hello, vue!'</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/images/v-once.gif" alt=""></p>
+<p>疑问：<code>v-once</code>的应用场景<br>答：如果显示的信息后续不需要再修改就可以使用<code>v-once</code>，因为这样可以提高性能。如果这个数据是响应式的那么这个Vue呢它要监听这个属性（如：data.msg）是否发生变化，所以说呢这样是比较消耗性能的。</p>
+<h2 id="双向数据绑定"><a href="#双向数据绑定" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h2><p>现在我们要想做一个复杂的应用肯定离不开与用户交互，</p>
+<p>疑问：这个用户交互主是什么呢<br>答：比如说你去登录注册，去下订单，去发评论，写个博客，微博像这样的工作都属于用户的交互</p>
+<p>那具体怎么来做交互呢？<br>这里肯定就要用到表单（form）的输入（input）域。</p>
+<p>当你在这个表单的输入域里面添加内容的时候或者更新内容的时候呢它会影响到数据的变化，所以说呢这就是所谓的交互</p>
+<h3 id="v-model双向数据绑定"><a href="#v-model双向数据绑定" class="headerlink" title="v-model双向数据绑定"></a>v-model双向数据绑定</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-text</span>=<span class="string">"msg"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"msg"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">data: &#123;</span><br><span class="line">    msg: <span class="string">'Hello,'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>什么是双向数据绑定？</p>
+<p>疑问：那这里的双向又体现在哪两个方向呢<br>答：我们之前接触的<strong>数据到页面</strong>这是一个方向，那用户去改这个内容它影响到模型数据他是另外一个方向</p>
+<p>或者说：从页面影响数据这是一个方向，如果说呢这个数据发生了变化接着插值表达式的值也跟着发生了变化这是外一个方向</p>
+<p>注意：双向绑定主要体现在表单输入域中</p>
+<h3 id="双向数据绑定的概念"><a href="#双向数据绑定的概念" class="headerlink" title="双向数据绑定的概念"></a>双向数据绑定的概念</h3><p>关于双向数据绑定其实还有一个非常重要的概念与其密切相关，其实呢就是所谓的<strong>MVVM</strong>这种设计思想，这种思想呢其实也是属于Vue这个框架非常核心的设计思想</p>
+<p>它最重要的一个理念：其实就是分治（分而治之）。</p>
+<p>就是把不同的这个功能的代码放到不同的模块里面然后呢再通过特定的方式把它们之间呢建立起关联</p>
+<h3 id="MVVM设计思想："><a href="#MVVM设计思想：" class="headerlink" title="MVVM设计思想："></a>MVVM设计思想：</h3><p>M（Model模型），其实就是我们用到的数据（data中的数据）。</p>
+<p>V（View视图），其实说白了就是我们所写的模板，本质来说呢就是DOM元素。</p>
+<p>VM（View-Model），就是实现控制逻辑，把以上两者结合在一起，比如说<strong>模型</strong>就<strong>提供数据</strong>，<strong>视图</strong>就<strong>提供页面的展示效果</strong>，然后VM实现控制逻辑，把两者结合在一起。</p>
+<p>注意：<strong>Model</strong>和<strong>View</strong>这两者之间<strong>不能够直接进行交互</strong>必须得通过VM。</p>
+<p>重点：双向绑定的方式， 从视图到模型用的是事件监听 从模型到视图用的是数据绑定。</p>
+<h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><p>Vue如何处理事件？</p>
+<p>v-on:click=”handle”（v-on:标准的事件名称）<br>或者 @click=”handle”（@标准的事件名称）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"handle"</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"handle"</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>疑问：那事件处理函数放在哪里呢<br>答：在Vue当中专门提供了一个属性用来定义我们需要的方法，叫<strong>methods</strong>，这个属性的值是一个对象，里面可以定义很多方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">'#app'</span>,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        <span class="comment">// 事件处理函数</span></span><br><span class="line">        handle: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            alert(<span class="string">'hello,kay!'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>事件函数的调用方式：</p>
+<p>直接绑定<strong>函数名称</strong> 或者 <strong>调用函数</strong></p>
+<p>疑问：直接绑定函数名称<br>答：就是可以直接通过函数名称来调用</p>
+<p>疑问：调用函数<br>答：就是函数名加个括号()</p>
+<p>注意：事件函数中的<code>this</code>指向的是Vue的实例对象（就是<code>vm</code>）。</p>
+<h3 id="事件基本使用"><a href="#事件基本使用" class="headerlink" title="事件基本使用"></a>事件基本使用</h3><p>事件函数参数传递</p>
+<p>疑问：<strong>绑定函数</strong>的两种方式有什么区别？<br>答：其实体现在<strong>参数传递的方式</strong>上</p>
+<h4 id="调用函数："><a href="#调用函数：" class="headerlink" title="调用函数："></a>调用函数：</h4><p>如果我们想要传递一个参数那么只能使用第二种方式（就是<strong>函数调用</strong>如：<code>@click=&quot;handle(参数)</code>）里面可以传参，除此之外呢有的时候我们还有可能传递<strong>事件对象</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"handle('hello, Vue!', $event)"</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>疑问：在Vue当中的事件对象如何传递呢？<br>答：直接通过<code>$event</code>，必须放到最后并且这个名称是固定的，这个就代表事件对象。</p>
+<h4 id="绑定函数名称"><a href="#绑定函数名称" class="headerlink" title="绑定函数名称"></a>绑定函数名称</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"handle"</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>疑问：那怎么接收事件对象呢？<br>答：其实默认第一个参数就是事件对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">methods: &#123;</span><br><span class="line">    handle: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(event);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h3><p>所谓的事件修饰符其实就是用来处理事件的一些特定的行为</p>
+<h4 id="stop"><a href="#stop" class="headerlink" title=".stop"></a>.stop</h4><p>阻止事件冒泡</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> @<span class="attr">click</span>=<span class="string">"handle1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click.stop</span>=<span class="string">"handle2"</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">    handle1: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        alert(<span class="string">'handle1 函数 触发了！'</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    handle2: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        alert(<span class="string">'handle2 函数 触发了'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="prevent"><a href="#prevent" class="headerlink" title=".prevent"></a>.prevent</h4><p>阻止默认行为</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span> @<span class="attr">click.prevent</span>&gt;</span>百度<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这里不绑定函数，也是可以的。</p>
+</blockquote>
+<h3 id="按键修饰符"><a href="#按键修饰符" class="headerlink" title="按键修饰符"></a>按键修饰符</h3><p>疑问：按键事件修饰符的应用场景？<br>答：它们主要用在键盘事件当中，来过滤到底是哪个按键按下去的时候来执行对应的函数</p>
+<h4 id="enter-回车键"><a href="#enter-回车键" class="headerlink" title=".enter 回车键"></a>.enter 回车键</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"pwd"</span> @<span class="attr">keyup.enter</span>=<span class="string">"handleSubmit"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">methods: &#123;</span><br><span class="line">    handleSubmit: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 一般的话就是在这里通过AJAX的方式把数据提交到后台</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.uname, <span class="keyword">this</span>.pwd);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="delete-删除键"><a href="#delete-删除键" class="headerlink" title=".delete 删除键"></a>.delete 删除键</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model</span>=<span class="string">"uname"</span> @<span class="attr">keyup.delete</span>=<span class="string">"clearContent"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">    data: &#123;</span><br><span class="line">        uname: <span class="string">''</span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        clearContent: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.uname = <span class="string">''</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="自定义按键事件修饰符"><a href="#自定义按键事件修饰符" class="headerlink" title="自定义按键事件修饰符"></a>自定义按键事件修饰符</h4><p>Vue提供的按键修饰符是有数的，Vue也提供了让我们去自定义一些按键修饰符</p>
+<p>自定义按键修饰符的规则：自定义按键修饰符的名称可以自己定义，但是对应的值必须是按键对应event.keyCode值</p>
+<p>其实呢你不去定义这个别名，直接通过去用这个值（如：81）也是可以的，但是呢不直观</p>
+<blockquote>
+<p><code>@keyup.keyCodes.81</code></p>
+</blockquote>
+<p>你还可以通过全局 <code>config.keyCodes</code> 对象<a href="https://cn.vuejs.org/v2/api/#keyCodes" target="_blank" rel="noopener">自定义按键修饰符别名</a>：</p>
 
       
     </div>
